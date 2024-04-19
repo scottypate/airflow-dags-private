@@ -19,7 +19,7 @@ with DAG(
     dag_id="example_kubernetes_pod_1", schedule="*/30 * * * *", default_args=default_args
 ) as dag:
     KubernetesPodOperator(
-        namespace="airflow",
+        namespace="airflow-scheduler",
         image="hello-world",
         labels={"dag": "example_kubernetes_pod_1"},
         name="airflow-test-pod",
